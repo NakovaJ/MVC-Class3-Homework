@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PizzaApp.Models;
+using PizzaApp.Models.Domain;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace PizzaApp.Controllers
@@ -27,6 +29,16 @@ namespace PizzaApp.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        //Add a SeeUsers action in the Home controller.
+        //This action should return a view that
+        //shows all the full names of the users in the system.
+
+        public IActionResult SeeUsers()
+        {
+            List<User> users = StaticDb.Users;
+            return View(users);
         }
     }
 }

@@ -10,5 +10,6 @@ namespace PizzaApp.Models.ViewModels
         public string PizzaName { get; set; }
         public decimal PriceOfPizza { get; set; }
         public PizzaSizeEnum PizzaSize { get; set; }
+        public bool IsOnPromotion { get; set; }
     }
 }

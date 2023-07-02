@@ -16,7 +16,8 @@ namespace PizzaApp.Models.Mappers
              Id = pizza.Id,
              PizzaName=pizza.Name,
              PriceOfPizza=pizza.Price,
-             PizzaSize=pizza.PizzaSize
+             PizzaSize=pizza.PizzaSize,
+             IsOnPromotion=pizza.IsOnPromotion,
             };
         }
     }

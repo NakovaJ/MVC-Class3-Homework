@@ -1,0 +1,24 @@
+﻿@*Add partial view for showing details of a pizza 
+    and use it in both the Pizza Index and Pizza Details view.*@
+
+    @Model PizzaViewModel
+
+    <h2>Details for the chosen pizza:</h2>
+    <p> Id: @Model.Id</p>
+    <p> Name: @Model.PizzaName</p>
+    <p> Price: @Model.PriceOfPizza</p>
+@if (Model.IsOnPromotion)
+{
+    <p>This pizza is on promotion</p>
+}
+else
+{
+    <p>No promotion today :(</p>
+}
+
+
+
+
+
+
+

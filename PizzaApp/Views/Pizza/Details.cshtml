@@ -1,5 +1,17 @@
 ﻿@model PizzaViewModel
 
+<partial name="~/Views/shared/partials/_PizzaDetailsPartial.cshtml"/>
+
 <h2>The details for the pizza with the given id are the following:</h2>
 
 <p>Pizza with id @Model.Id @Model.PizzaName of size @Model.PizzaSize costs @Model.PriceOfPizza!</p>
+
+@if (!Model.IsOnPromotion)
+{
+    <h4>There is no promotion on this particular pizza today!</h4>
+
+}
+else
+  {  <h4>This pizza is currently on promotion!</h4>}
+
+
